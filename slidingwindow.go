@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func subSum(nums []int, left int, right int) int {
+func subSums(nums []int, left int, right int) int {
 	sum := 0
 	sub := nums[left : right+1]
 	for _, num := range sub {
@@ -23,7 +23,7 @@ func slidWin() {
 			currSum -= nums[left]
 			left++
 		}
-		if subSum(nums, left, right) == goal {
+		if subSums(nums, left, right) == goal {
 			c++
 		}
 	}
