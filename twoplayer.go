@@ -16,7 +16,6 @@ func twoPlayer() {
 	fmt.Print("Enter the value for p2: ")
 	p2, _ := reader.ReadString('\n')
 
-	// Trim spaces and convert to lowercase
 	p1 = strings.ToLower(strings.TrimSpace(p1))
 	p2 = strings.ToLower(strings.TrimSpace(p2))
 
