@@ -13,7 +13,7 @@ func minVal(a int, b int) int {
 }
 
 func finMinMax(nums []int, idx int) int {
-	arr := nums[:len(nums)]
+	arr := nums[:]
 	arr[idx] *= 2
 	min := slices.Min(arr)
 	max := slices.Max(arr)
