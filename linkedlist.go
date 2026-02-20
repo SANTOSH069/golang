@@ -69,8 +69,24 @@ func (l *LinkedList) DisplayNode() {
 func (l *LinkedList) DeleteFirst() {
 	if l.head == nil {
 		fmt.Println("Nothing to delete!")
+		return
 	}
-	curr := l.head
-	l.head = curr.next
-	fmt.Println("Node Deleted !")
+	l.head = l.head.next
+	fmt.Println("Node Deleted!")
+}
+
+func main() {
+
+	// Create linked list
+	ls := LinkedList{}
+
+	// Insert nodes
+	ls.InsertNode(11)
+	ls.InsertNode(20)
+	ls.InsertNode(30)
+	ls.InsertNode(40)
+
+	fmt.Println("Initial List:")
+	ls.DisplayNode()
+
 }
