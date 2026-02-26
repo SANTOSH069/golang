@@ -75,7 +75,7 @@ func (l *LinkedList) DeleteFirst() {
 	fmt.Println("Node Deleted!")
 }
 
-func main() {
+func ls() {
 
 	// Create linked list
 	ls := LinkedList{}
