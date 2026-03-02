@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 func issubstr() bool {
 	s := "hello"
 	t := "ell"
