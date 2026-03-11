@@ -2,17 +2,23 @@ package main
 
 import (
 	"fmt"
-	"strings"
+	"sync"
 )
 
+func display(str string, wg *sync.WaitGroup) {
+	defer wg.Done()
+
+	for i := 0; i < 5; i++ {
+		fmt.Println(str)
+	}
+}
+
 func main() {
-	paragraph := "Bob hit a ball, the hit BALL flew far after it was hit."
-	res := strings.Fields(paragraph)
-	words := []string{}
-	for _, word := range res {
-		words = append(words, word)
-	}
-	for _, str := range words {
-		fmt.Print(str + " ")
-	}
+	var wg sync.WaitGroup
+
+	wg.Add(2)
+	go display("This is Go-Routines", &wg)
+	go display("Hello There", &wg)
+
+	wg.Wait()
 }
