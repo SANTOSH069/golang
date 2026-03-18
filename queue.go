@@ -15,7 +15,7 @@ func (q *Queue) AddLast(data int) {
 }
 
 func (q *Queue) Dequeue() {
-	ln := len(q.qu)
+	ln := len(q.qu) - 1
 	q.qu = q.qu[:ln]
 }
 
